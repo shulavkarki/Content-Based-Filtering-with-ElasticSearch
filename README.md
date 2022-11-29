@@ -31,8 +31,9 @@ docker-compose up
 > Make sure the elasticsearch and kibana is working by going to following ports.
 ```localhost:9200```
 ```localhost:5601```  
-> You should get something like this:  
-![image](https://user-images.githubusercontent.com/40908371/204493348-2d122b0c-cfe7-449c-93fc-512869abe2f4.png)  
+> You should get something like this: 
+<img src="https://user-images.githubusercontent.com/40908371/204493348-2d122b0c-cfe7-449c-93fc-512869abe2f4.png" width="200" height="400" /> 
+<!-- ![image](https://user-images.githubusercontent.com/40908371/204493348-2d122b0c-cfe7-449c-93fc-512869abe2f4.png)   -->
 ![image](https://user-images.githubusercontent.com/40908371/204493447-f1e47659-26b2-4551-a20c-60fe246dd229.png)
 
 5. Index the movie.
