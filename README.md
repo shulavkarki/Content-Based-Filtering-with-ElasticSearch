@@ -34,3 +34,8 @@ docker-compose up
 ```
 python create_index.py
 ```
+
+6. Run Fastapi
+```
+uvicorn foldername.app:app --reload
+```
