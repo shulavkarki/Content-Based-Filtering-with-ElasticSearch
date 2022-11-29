@@ -47,7 +47,14 @@ uvicorn foldername.app:app --reload
 ```
 ## In and Out
 Pull up:
-> [localhost:8000/docs](http://localhost:8000/docs)
-``` Input: star wars ```
+> [localhost:8000/docs](http://localhost:8000/docs)  
+
   
-#### Output
+``` Input```
+movie_name: "star wars"  
+no_of_recommendation: 10  
+  
+``` Output```
+  
+![image](https://user-images.githubusercontent.com/40908371/204495216-a01ccf7f-a1c7-4e13-b0df-8e7de7e95a5f.png)
+  
