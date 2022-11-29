@@ -23,7 +23,7 @@ services:
       - 9300:9300
     networks:
       - elastic
-    
+
   kibana:
     image: docker.elastic.co/kibana/kibana:7.11.0
     container_name: kibana

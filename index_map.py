@@ -1,5 +1,6 @@
 import config
 
+
 def create_df_index(es):
     """
     If the index doesn't exist, create it.
@@ -12,40 +13,31 @@ def create_df_index(es):
         "mappings": {
             "properties": {
                 "movie_name": {
-                    "type" : "text",
+                    "type": "text",
                 },
-                "embedding":{
-                    "type" : "dense_vector",
-                    "dims" : 384 
-                }, 
-                "genre":{
-                    "type" : "text",
-                }, 
-                'movie_id':{
-                    'type': "text"
-                }
+                "embedding": {"type": "dense_vector", "dims": 384},
+                "genre": {
+                    "type": "text",
+                },
+                "movie_id": {"type": "text"},
             }
-        }
+        },
     }
     try:
-        # Create the index if not exists
-    # if not es.indices.exists(config.INDEX_NAME):
-            # Ignore 400 means to ignore "Index Already Exist" error.
-        es.indices.create(
-            index=config.INDEX_NAME, 
-            body=index_body  # ignore=[400, 404]
-        )
+
+        # Ignore 400 means to ignore "Index Already Exist" error.
+        es.indices.create(index=config.INDEX_NAME, body=index_body)  # ignore=[400, 404]
         print(f"Created Index -> {config.INDEX_NAME}")
-            # else:
-                # print(f"Index {config.INDEX_NAME} exists...")
+        # else:
+        # print(f"Index {config.INDEX_NAME} exists...")
     except Exception as ex:
         print(str(ex))
 
-        
+
 def insert_df_row(doc, es):
     """
     It checks if the index exists, if not, it creates it, then it indexes the document.
-    
+
     :param doc: The document to be inserted
     """
     if not es.indices.exists(config.INDEX_NAME):
