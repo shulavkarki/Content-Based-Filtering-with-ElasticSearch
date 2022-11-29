@@ -6,7 +6,7 @@ A Movie recommendation system using Content Based Filtering with ElasticSearch
 - [Sbert](https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2)
 - [FastApi](https://fastapi.com)
 - [NLTK](https://nltk.org)
-- [Pandas](https://pandas.org)
+- [Pandas](https://pandas.pydata.org)
 
 ## Getting Started
 
