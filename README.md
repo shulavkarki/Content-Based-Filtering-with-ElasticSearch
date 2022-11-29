@@ -50,7 +50,7 @@ Pull up:
 > [localhost:8000/docs](http://localhost:8000/docs)  
 
   
-``` Input```
+``` Input```  
 movie_name: "star wars"  
 no_of_recommendation: 10  
   
