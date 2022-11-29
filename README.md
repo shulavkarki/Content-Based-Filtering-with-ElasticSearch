@@ -29,4 +29,7 @@ docker-compose up
 ```
 > run docker desktop.
 
-5. 
+5. Index the movie.
+```
+python create_index.py
+```
