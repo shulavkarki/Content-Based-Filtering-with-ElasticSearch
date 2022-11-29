@@ -45,3 +45,9 @@ python create_index.py
 ```
 uvicorn foldername.app:app --reload
 ```
+## In and Out
+Pull up:
+> [localhost:8000/docs](http://localhost:8000/docs)
+``` Input: star wars ```
+  
+#### Output
