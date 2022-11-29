@@ -4,7 +4,7 @@ A Movie recommendation system using Content Based Filtering with ElasticSearch
 - [Python](https://www.python.org/)
 - [ElasticSearch](https://elastic.co)
 - [Sbert](https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2)
-- [FastApi](https://fastapi.com)
+- [FastApi](https://fastapi.tiangolo.com)
 - [NLTK](https://nltk.org)
 - [Pandas](https://pandas.pydata.org)
 
