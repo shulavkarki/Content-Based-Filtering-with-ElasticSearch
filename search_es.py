@@ -29,24 +29,24 @@ def search_topN(query_vec, es, no_of_recommendation):
     )
     return response['hits']['hits']
 
-def search_movies(query, es, no_of_content):
-    """
-    It takes a query string, connects to the Elasticsearch cluster, and returns the top 10 results
+# def search_movies(query, es, no_of_content):
+#     """
+#     It takes a query string, connects to the Elasticsearch cluster, and returns the top 10 results
     
-    :param query: The query string to search for
-    """
+#     :param query: The query string to search for
+#     """
 
-    script_query = {
-            "query" : {
-                "match" : {
-                    'movie_name': query
-                },
-            },
-        },
-    response = es.search(
-        index = config.INDEX_NAME,
-        body = script_query,
-        size = no_of_content,
-    )
+#     script_query = {
+#             "query" : {
+#                 "match" : {
+#                     'movie_name': query
+#                 },
+#             },
+#         },
+#     response = es.search(
+#         index = config.INDEX_NAME,
+#         body = script_query,
+#         size = no_of_content,
+#     )
 
-    return response['hits']['hits']
+#     return response['hits']['hits']

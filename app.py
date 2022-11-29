@@ -47,18 +47,18 @@ def get_recommendations(query:Query):
         dicti[res["_id"]] = ResOut(**res["_source"])
     return dicti
 
-@app.post("/search/", response_model = dict[int, ResOut])
-def search(query:Query):
-    """
-    It takes a query object as input, searches for the movie name in the elasticsearch index and returns
-    the top n similar contents
+# @app.post("/search/", response_model = dict[int, ResOut])
+# def search(query:Query):
+#     """
+#     It takes a query object as input, searches for the movie name in the elasticsearch index and returns
+#     the top n similar contents
     
-    :param query: Query
-    :type query: Query
-    :return: A list of movie names
-    """
-    response = search_movies(query.movie_name, es, query.no_of_recommendation)
-    dicti = {}
-    for res in response:
-        dicti[res["_id"]] = ResOut(**res["_source"])
-    return dicti
+#     :param query: Query
+#     :type query: Query
+#     :return: A list of movie names
+#     """
+#     response = search_movies(query.movie_name, es, query.no_of_recommendation)
+#     dicti = {}
+#     for res in response:
+#         dicti[res["_id"]] = ResOut(**res["_source"])
+#     return dicti
