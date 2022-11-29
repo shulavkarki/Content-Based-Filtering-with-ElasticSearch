@@ -1,11 +1,8 @@
-# from typing import Union
-import collections
 from fastapi import FastAPI
 from sentence_transformers import SentenceTransformer
-from elasticsearch import Elasticsearch
 # Importing the StemTokenizer class from the preprocessing.py file.
 from preprocessing import StemTokenizer
-from search_es import search_topN, search_movies
+from search_es import search_topN
 import config
 from connectelastic import connect_elastic
 from model import Query, ResOut
