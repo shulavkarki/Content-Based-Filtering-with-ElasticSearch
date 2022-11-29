@@ -28,7 +28,9 @@ pip install -r requirements.txt
 docker-compose up
 ```
 > run docker desktop.
-
+> Make sure the elasticsearch and kibana is working by going to following ports.
+```localhost:9200```
+```localhost:5601```
 5. Index the movie.
 > For indexing movies to elasticsearch. Run the following.
 ```
