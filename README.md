@@ -5,5 +5,13 @@ A Movie recommendation system using Content Based Filtering with ElasticSearch
 - ElasticSearch
 - Sbert
 - FastApi
-- Nltk
-- pandas
+- NLTK
+- Pandas
+
+## Getting Started
+
+### Installation
+1. Clone the repo
+```
+git clone https://github.com/shulavkarki/Content-Based-Filtering-with-ElasticSearch.git
+```
