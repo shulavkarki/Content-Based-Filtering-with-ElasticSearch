@@ -30,6 +30,7 @@ docker-compose up
 > run docker desktop.
 
 5. Index the movie.
+> For indexing movies to elasticsearch. Run the following.
 ```
 python create_index.py
 ```
