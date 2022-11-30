@@ -1,4 +1,4 @@
-import config
+from config import settings
 
 
 def create_df_index(es):
@@ -26,10 +26,10 @@ def create_df_index(es):
     try:
 
         # Ignore 400 means to ignore "Index Already Exist" error.
-        es.indices.create(index=config.INDEX_NAME, body=index_body)  # ignore=[400, 404]
-        print(f"Created Index -> {config.INDEX_NAME}")
+        es.indices.create(index=settings.INDEX_NAME, body=index_body)  # ignore=[400, 404]
+        print(f"Created Index -> {settings.INDEX_NAME}")
         # else:
-        # print(f"Index {config.INDEX_NAME} exists...")
+        # print(f"Index {settings.INDEX_NAME} exists...")
     except Exception as ex:
         print(str(ex))
 
@@ -40,7 +40,7 @@ def insert_df_row(doc, es):
 
     :param doc: The document to be inserted
     """
-    if not es.indices.exists(config.INDEX_NAME):
+    if not es.indices.exists(settings.INDEX_NAME):
         create_df_index(es)
     # try:
-    es.index(index=config.INDEX_NAME, body=doc)
+    es.index(index=settings.INDEX_NAME, body=doc)

@@ -1,16 +1,16 @@
 from fastapi import FastAPI
 from sentence_transformers import SentenceTransformer
 
-import config
+from config import settings
 from connectelastic import connect_elastic
 from model import Query, ResOut
 # Importing the StemTokenizer class from the preprocessing.py file.
 from preprocessing import StemTokenizer
 from search_es import search_topN
 
-model = SentenceTransformer(config.MODEL_NAME)
+model = SentenceTransformer(settings.MODEL_NAME)
 preprocess = StemTokenizer()
-es = connect_elastic(config.ENDPOINT, config.ELASTIC_USER, config.ELASTIC_PASSWORD)
+es = connect_elastic(settings.ENDPOINT, settings.ELASTIC_USER, settings.ELASTIC_PASSWORD)
 
 app = FastAPI()
 

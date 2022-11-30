@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from sentence_transformers import SentenceTransformer
 
-import config
+from config import settings
 from connectelastic import connect_elastic
 from index_map import insert_df_row
 from preprocessing import StemTokenizer
@@ -32,6 +32,6 @@ def process_df(path: str, preprocess: StemTokenizer, model: SentenceTransformer,
 
 if __name__ == "__main__":
     preprocess = StemTokenizer()
-    model = SentenceTransformer(config.MODEL_NAME)
-    es = connect_elastic(config.ENDPOINT, config.ELASTIC_PASSWORD)
-    process_df(config.DATA_PATH, preprocess, model, es)
+    model = SentenceTransformer(settings.MODEL_NAME)
+    es = connect_elastic(settings.ENDPOINT, settings.ELASTIC_PASSWORD)
+    process_df(settings.DATA_PATH, preprocess, model, es)

@@ -1,4 +1,4 @@
-import config
+from config import settings
 
 
 def search_topN(query_vec, es, no_of_recommendation):
@@ -18,7 +18,7 @@ def search_topN(query_vec, es, no_of_recommendation):
         }
     }
     response = es.search(
-        index=config.INDEX_NAME,
+        index=settings.INDEX_NAME,
         body={
             "size": no_of_recommendation,
             "query": script_query,
@@ -43,7 +43,7 @@ def search_topN(query_vec, es, no_of_recommendation):
 #             },
 #         },
 #     response = es.search(
-#         index = config.INDEX_NAME,
+#         index = settings.INDEX_NAME,
 #         body = script_query,
 #         size = no_of_content,
 #     )

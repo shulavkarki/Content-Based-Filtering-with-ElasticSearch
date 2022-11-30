@@ -1,5 +1,10 @@
-ENDPOINT = "http://localhost:9200"
-ELASTIC_PASSWORD = "elastic"
-ELASTIC_USER = "elastic"
-MODEL_NAME = "all-MiniLM-L12-v2"
-INDEX_NAME = "allmovies"
+
+from dynaconf import Dynaconf
+
+settings = Dynaconf(
+    envvar_prefix="DYNACONF",
+    settings_files=['settings.toml', '.secrets.toml'],
+)
+
+# `envvar_prefix` = export envvars with `export DYNACONF_FOO=bar`.
+# `settings_files` = Load these files in the order.
