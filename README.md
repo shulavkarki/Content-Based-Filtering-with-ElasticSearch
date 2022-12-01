@@ -47,7 +47,7 @@ python create_index.py
 
 6. Run Fastapi
 ```
-uvicorn foldername.app:app --reload
+uvicorn foldername.app{filename app.py}:app{name of fastpi method} --reload
 ```
 ## In and Out
 Pull up:
