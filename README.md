@@ -19,6 +19,8 @@ git clone https://github.com/shulavkarki/Content-Based-Filtering-with-ElasticSea
 ```
 python -m venv {environmentname}
 ```
+activate accordingly.
+
 3. Install the requirements.
 ```
 pip install -r requirements.txt
