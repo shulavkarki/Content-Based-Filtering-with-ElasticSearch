@@ -1,4 +1,4 @@
 
 # Ignore dynaconf secret files
-__pycache__
+*__pycache__*
 .secrets.*
